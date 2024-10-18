@@ -93,6 +93,9 @@ Add elemental damage types or advanced enemy AI, such as enemies that react dyna
 ### 3. Dynamic Inventory System
 Players manage their inventory, collecting items that influence their stats. The system is flexible and supports adding new items or mechanics like crafting.
 
+![Inventory System](assets/images/inventory.png)
+
+
 #### Process:
 - **Inventory Slots:** Limited by available slots; items must be swapped if the inventory is full.
 - **Item Effects:** Weapons increase attack, potions restore health, etc.
@@ -125,6 +128,9 @@ Future expansions could include crafting or item durability, adding more strateg
 
 ### 4.IA and Random Events
 
+![Random Events - Dice Roll](assets/images/dice.png)
+
+
 The AI system is still basic and allows enemies to act according to simple patterns during combat, but future improvements are planned. Random events, such as interactions with statues or hidden rooms, add an element of unpredictability.
 
 #### Example from `randomEvents.js`:
@@ -154,20 +160,24 @@ Each system is decoupled, allowing easy modifications without impacting other pa
 
 ## License
 
-This project is licensed under the **MIT License**. You are free to use, modify, and distribute the code, provided that you give credit to the original author.
+This project is licensed under the **MIT License**. You are free to use, modify, and share the code, as long as you give credit to [Pixel Perfekt](https://pixelperfekt.me/).
 
-MIT License
-
-This project is licensed under the MIT License. See the LICENSE file for more details.
+See the LICENSE file for more details.
 
 ## Contributions
 
-Feel free to contribute by submitting issues or pull requests. Contributions are welcome in areas such as:
+Contributions are more than welcome! Whether you’re a game developer, a fan of rogue-likes, or simply someone who loves tinkering with code, I’d love to see what you bring to **Spectral Remnants**. 💡 
 
-- **Improving Combat Mechanics:** Add new types of enemies, buffs, debuffs, or new combat systems.
-- **Extending Dungeon Generation:** Add new rooms, traps, or secret areas.
-- **Expanding Inventory Features:** Add crafting systems, item durability, or new item types.
-- **Enhancing AI Behavior:** Implement more advanced enemy behaviors or random events.
+Here are some ideas for how you could contribute:
 
-All contributions are subject to the project's licensing terms.
+- **Improving Combat Mechanics:** Add new enemies, buffs, debuffs, or tweak the battle systems to create even more exciting gameplay.
+- **Extending Dungeon Generation:** Design new room types, tricky traps, or hidden areas to make each run even more unique.
+- **Expanding Inventory Features:** Build out crafting systems, add item durability, or introduce rare, powerful artifacts.
+- **Enhancing AI Behavior:** Implement smarter enemies or random events that challenge the player in new ways.
+
+Feel free to submit issues, pull requests, or just drop a message. Let’s collaborate and make something awesome together! ✨
+
+Thank you for checking out **Spectral Remnants**—I hope you have as much fun exploring it as I had creating it! 💜
+
+— Made with ❤️ by [Pixel Perfekt](https://pixelperfekt.me/)
 
