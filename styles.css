@@ -11,7 +11,6 @@
     --success-color: #4a7c59;
     --border-color: #3d3a34;
     --shadow-color: rgba(2, 1, 5, 0.5);
-    /* un vert foncé avec une opacité de 50% */
 
 
 }
@@ -122,7 +121,6 @@ body {
     height: 36px;
     position: absolute;
     background-size: cover;
-    /* Ajoutez ceci pour s'assurer que l'image occupe tout l'élément */
     background-repeat: no-repeat;
     background: radial-gradient(circle, #cf4f50 0%, var(--danger-color) 100%);
     border: 2px solid #5e1a1b;
@@ -224,7 +222,6 @@ button:hover {
     padding-right: 10px;
     padding-left: 10px;
     margin-bottom: 20px;
-    /* Espace pour la corbeille en dessous */
 
 }
 
@@ -233,7 +230,6 @@ button:hover {
     border: 1px solid rgba(255, 215, 0, 0.2);
     border-radius: 5px;
     position: relative;
-    /* Pour positionner les éléments internes */
     box-shadow:
         0 2px 5px rgba(29, 17, 2, 0.3),
         inset 0 1px 1px rgba(255, 255, 255, 0.1),
@@ -242,9 +238,7 @@ button:hover {
     align-items: center;
     justify-content: center;
     overflow: visible;
-    /* Permet aux éléments internes de dépasser les limites du slot */
     transition: transform 0.3s ease, opacity 0.3s ease;
-    /* Transition pour un mouvement fluide */
     height: 100px;
 }
 
@@ -263,40 +257,31 @@ button:hover {
     max-height: 80%;
     cursor: pointer;
     pointer-events: none;
-    /* Pour éviter de sélectionner l'image elle-même */
 
 
 }
 
 .inventory-slot.dragging {
     transform: scale(1.1);
-    /* Agrandir légèrement l'objet lors du glisser */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-    /* Ajouter une ombre */
     opacity: 0.8;
-    /* Légèrement transparent */
     cursor: grabbing;
-    /* Garder le curseur par défaut, ou 'grabbing' si vous préférez */
 
 }
 
 .inventory-controls {
     display: flex;
     justify-content: space-between;
-    /* Sépare la corbeille et le bouton */
     align-items: center;
     margin-top: 10px;
     padding: 0 10px;
-    /* Ajoute un peu de padding sur les côtés */
 }
 
 .trash-bin {
     padding: 5px 10px;
 
     background-color: #333;
-    /* Couleur de fond similaire aux autres éléments */
     border: 2px solid #888;
-    /* Bordure grise pour l'harmoniser avec les autres boutons */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -304,16 +289,12 @@ button:hover {
     color: white;
     cursor: pointer;
     border-radius: 5px;
-    /* Arrondir légèrement les coins */
     margin-left: 10px;
-    /* Ajoute un espace si nécessaire par rapport aux bords */
 }
 
 .trash-bin.over {
     background-color: #d9534f;
-    /* Change la couleur lorsque l'objet est au-dessus */
     cursor: default;
-    /* Garder le curseur par défaut */
 }
 
 
@@ -369,31 +350,23 @@ button:hover {
 
 .inventory-slot.dragging .inventory-button {
     display: none;
-    /* Cache les boutons pendant le drag */
 }
 
-/* Infobulle */
 
 
 .tooltip {
     position: fixed;
-    /* Position fixe pour sortir du flux du document */
     top: -9999px;
-    /* Initialement positionné hors de l'écran */
     left: -9999px;
-    /* Initialement positionné hors de l'écran */
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 5px;
     border-radius: 5px;
     white-space: nowrap;
     z-index: 9999;
-    /* Très haut pour garantir qu'il est au-dessus de tout */
     opacity: 0;
     transition: opacity 0.3s ease, top 0s, left 0s;
-    /* Ajout des transitions pour une apparence fluide */
     pointer-events: none;
-    /* Évite que l'infobulle interfère avec la souris */
     font-size: 16px;
 }
 
@@ -424,7 +397,6 @@ button:hover {
     background: transparent;
 }
 
-/* Ajout d'un effet de texture subtil */
 #stats-display::before {
     content: '';
     position: absolute;
@@ -663,7 +635,6 @@ button:hover {
     }
 }
 
-/* Ajoutez ces styles pour améliorer l'aspect visuel des éléments spécifiques */
 .item.healthPotion {
     background: radial-gradient(circle, #ff6b6b 0%, #ee5253 100%);
 }
@@ -698,7 +669,6 @@ button:hover {
    background-image: url('assets/img/ennemy/goblin.png');
     background-size: cover;
     background-position: center;
-    /* Assure que l'image est centrée */
     border: 2px solid #0d8c6d;
 }
 
@@ -1000,7 +970,6 @@ button:hover {
     filter: blur(4px);
 }
 
-/* Ajoutez un effet de particules pour les actions spéciales */
 @keyframes particleAnimation {
     0% {
         transform: translateY(0) rotate(0deg);
@@ -1025,15 +994,11 @@ button:hover {
 
 .chest {
     width: 64px;
-    /* Augmenté de 40px à 64px */
     height: 64px;
-    /* Augmenté de 40px à 64px */
     position: absolute;
     background-image: url('assets/img/tile/chest.png');
     background-size: contain;
-    /* Changé de 'cover' à 'contain' */
     background-position: center bottom;
-    /* Ajouté pour aligner le bas du coffre */
 
     background-repeat: no-repeat;
 
@@ -1043,7 +1008,6 @@ button:hover {
     border: 2px solid #ffffff00;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0);
     margin-left: -12px;
-    /* (64px - taille_de_la_tuile) / 2 */
     margin-top: -15px;
 
 }
@@ -1202,7 +1166,6 @@ button:hover {
 .hp-fill {
     height: 100%;
     width: 0;
-    /* Ajusté par JavaScript */
     background: linear-gradient(to right, #ff3019 0%, #cf0404 100%);
     transition: width 0.3s ease, transform 0.3s ease;
     position: relative;
@@ -1333,7 +1296,6 @@ button:hover {
     display: none;
 }
 
-/* Styles pour les conteneurs de sorts et d'inventaire */
 .spells-container,
 .inventory-container {
     margin-top: 25px;
@@ -1344,7 +1306,6 @@ button:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
-/* Style pour les boutons de sorts désactivés */
 .action-btn.disabled {
     opacity: 0.5;
     cursor: not-allowed;
@@ -1358,10 +1319,8 @@ button:hover {
 
 .merchant {
     background-image: url('assets/img/ennemy/merch.png');
-    /* Chemin de l'image */
     background-size: cover;
     width: 32px;
-    /* Assurez-vous que ces dimensions correspondent à la taille de votre sprite */
     height: 32px;
 }
 
@@ -1617,12 +1576,9 @@ button:hover {
 }
 
 .inventory-container {
-    /* Ensure these styles exist */
     display: none;
-    /* default hidden */
     position: relative;
     background-color: rgba(0, 0, 0, 0.8);
-    /* Dark background for visibility */
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
