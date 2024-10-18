@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unknow project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="game-container" style="position: relative;">
+        <div id="game-map"></div>
+        <div id="hero"></div>
+        <div id="message-box"></div>
+        <div id="combat-ui" style="display: none;"></div>
+        <div id="merchant-container" class="hidden"></div>
+    </div>
+
+    <div id="inventory" style="display: none;">
+        <h3>Inventory</h3>
+        <ul id="inventory-list"></ul>
+
+    </div>
+
+    <!-- Include all scripts, ensuring the order is correct -->
+    <script src="js/config.js"></script>
+    <script src="js/item.js"></script>
+    <script src="js/spells.js"></script>
+    <script src="js/enemy.js"></script>
+    <script src="js/dungeon.js"></script>
+    <script src="js/hero.js"></script>
+    <script src="js/renderer.js"></script>
+
+    <script src="js/game.js"></script>
+    <script src="js/randomEvents.js"></script>
+
+</body>
+
+</html>
