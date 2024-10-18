@@ -5,6 +5,8 @@
 
 ## Introduction
 
+![Spectral Remnants Menu](assets/images/menu.png)
+
 **Spectral Remnants**  is a technical proof of concept for a dungeon-crawling game developed in HTML5, CSS3, and JavaScript (ES6). This project explores advanced gameplay mechanics, such as procedural dungeon generation, turn-based combat, dynamic inventory management, and modular game architecture.
 
 I chose to build a dungeon crawler because I’ve always enjoyed rogue-like games, especially the original Rogue. This genre provides an excellent playground to experiment with a variety of game mechanics like procedural generation, RPG elements, and strategic turn-based combat. I wanted to create a project that challenged me to implement these systems from scratch.
@@ -29,6 +31,9 @@ All features—dungeon generation, combat, rendering, inventory management—are
 
 ### 1. Procedural Dungeon Generation
 Spectral Remnants employs the **BSP algorithm** to split the dungeon into rooms and corridors, ensuring unique layouts every time the player enters a new level.
+
+![Dungeon Generation Example](assets/images/dungeon_generation.png)
+
 
 #### Process:
 - **Room Creation:** BSP divides the map into sections where rooms are randomly placed.
@@ -60,6 +65,9 @@ The dungeon generation system can easily be extended with new room types (e.g., 
 
 ### 2. Turn-Based Combat System
 Combat is calculated based on hero and enemy stats, including factors like attack, defense, and critical hit chances. The system is modular and customizable.
+
+![Combat Example](assets/images/combat.png)
+
 
 #### Process:
 - **Damage Calculation:** Damage is determined by subtracting the defender's defense from the attacker's attack power.
