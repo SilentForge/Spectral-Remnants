@@ -359,13 +359,37 @@ class Game {
         document.head.appendChild(style);
 
         // Parallax Effect
+        let spectralElement = document.querySelector('.spectral');
+        let remnantsElement = document.querySelector('.remnants');
+        let spectralExists = !!spectralElement;
+        let remnantsExists = !!remnantsElement;
+
         document.addEventListener('mousemove', (e) => {
-            const depth = 5;
-            const moveX = (e.clientX - window.innerWidth / 2) / depth;
-            const moveY = (e.clientY - window.innerHeight / 2) / depth;
-            document.querySelector('.spectral').style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
-            document.querySelector('.remnants').style.transform = `translateX(${-moveX}px) translateY(${-moveY}px)`;
+            if (spectralExists) {
+                const depth = 5;
+                const moveX = (e.clientX - window.innerWidth / 2) / depth;
+                const moveY = (e.clientY - window.innerHeight / 2) / depth;
+
+                if (spectralElement) {
+                    spectralElement.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`;
+                } else {
+                    spectralExists = false;
+                }
+            }
+
+            if (remnantsExists) {
+                const depth = 5;
+                const moveX = (e.clientX - window.innerWidth / 2) / depth;
+                const moveY = (e.clientY - window.innerHeight / 2) / depth;
+
+                if (remnantsElement) {
+                    remnantsElement.style.transform = `translateX(${-moveX}px) translateY(${-moveY}px)`;
+                } else {
+                    remnantsExists = false;
+                }
+            }
         });
+
 
         // Dynamic Lighting Effect for the Title
         const title = document.getElementById('game-title');
@@ -1892,7 +1916,8 @@ class Game {
 
         if (this.inCombat && this.currentEnemy) {
             const damage = this.hero.attack(this.currentEnemy);
-            this.showMessage(`You deal ${damage} damage to the enemy!`);
+            this.showMessage(`You deal ${damage.damage} damage to the enemy!`);
+
 
             // Launch the attack sound and activate the cooldown
             this.playSoundWithCooldown('attack', 500);
