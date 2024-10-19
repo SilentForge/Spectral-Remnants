@@ -15,6 +15,11 @@ Throughout this project, I’ve learned a lot by building everything from the gr
 
 **Note:** This project is a development playground, not a finished game, allowing for experimentation with game mechanics and modular systems that other developers can easily extend.
 
+## Live Demo
+
+Check out the live version of **Spectral Remnants** [here](https://silentforge.github.io/Spectral-Remnants/).
+
+
 ## Project Goals
 
 ### 1. Technical Demonstration
