@@ -1399,18 +1399,45 @@ class Game {
 
 
 
-    handleMovement(key) {
-        let dx = 0, dy = 0;
+handleMovement(key, isAZERTY = null) {
+    let dx = 0, dy = 0;
+
+    // Auto-detect layout if not set
+    if (isAZERTY === null) {
+        if (key === 'a' || key === 'q') {
+            // If the player pressed 'q', it's AZERTY, otherwise it's QWERTY
+            isAZERTY = (key === 'q');
+        }
+    }
+
+    // Handle QWERTY or AZERTY layout
+    if (isAZERTY) {
+        switch (key) {
+            case 'z': dy = -1; break;  // Z in AZERTY is up
+            case 's': dy = 1; break;   // S in AZERTY is down
+            case 'q': dx = -1; break;  // Q in AZERTY is left
+            case 'd': dx = 1; break;   // D in AZERTY is right
+        }
+    } else {
         switch (key) {
             case 'ArrowUp': dy = -1; break;
             case 'ArrowDown': dy = 1; break;
             case 'ArrowLeft': dx = -1; break;
             case 'ArrowRight': dx = 1; break;
-        }
-        if (dx !== 0 || dy !== 0) {
-            this.moveHero(dx, dy);
+            // Add WASD for QWERTY
+            case 'w': dy = -1; break;  // W in QWERTY is up
+            case 's': dy = 1; break;   // S in QWERTY is down
+            case 'a': dx = -1; break;  // A in QWERTY is left
+            case 'd': dx = 1; break;   // D in QWERTY is right
         }
     }
+
+    if (dx !== 0 || dy !== 0) {
+        this.moveHero(dx, dy);
+    }
+}
+
+
 
     moveHero(dx, dy) {
         // PREVENT MOVEMENT IF A MODAL IS ALREADY OPEN
