@@ -2358,6 +2358,8 @@ class Game {
             this.currentEnemy = null;
 
             // Restart The Game
+            window.location.reload();
+
             this.init();
         }, 3000); // Wait for 3 seconds to show the game over message beforestarting
     }
